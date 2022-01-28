@@ -1,11 +1,10 @@
 const createGame = (e) => {
   e.preventDefault();
 
-  let name = document.getElementById('name');
-  let score = document.getElementById('score');
+  const name = document.getElementById('name');
+  const score = document.getElementById('score');
 
-  const url =
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/fxcnsYcJrkT4mY83CQhy/scores/';
+  const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/fxcnsYcJrkT4mY83CQhy/scores/';
 
   const initBody = {
     user: name.value,
@@ -24,7 +23,8 @@ const createGame = (e) => {
     return result;
   };
   postGames().then((game) => {
-    document.getElementById('message').innerHTML = game.result;
+    const { result } = game;
+    document.getElementById('message').innerHTML = result;
     name.value = '';
     score.value = '';
   });
