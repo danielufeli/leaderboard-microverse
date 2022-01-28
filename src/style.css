@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+  padding: 50px;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding: 10px 35px;
+}
+
+.scores {
+  display: inline;
+}
+
+.scores h2 {
+  display: inline-block;
+  margin: 0;
+  padding-right: 20px;
+}
+
+button {
+  float: right;
+  background: #fff;
+  border: 2px solid #000;
+  box-shadow: 2px 2px #000;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #333;
+  color: #fff;
+}
+
+.scores table {
+  width: 100%;
+  border: 2px solid #000;
+  margin-top: 20px;
+}
+
+.scores tr:nth-child(even) {
+  background: #ddd;
+}
+
+.add form span {
+  color: #f00;
+  font-style: italic;
+}
+
+.add form input {
+  width: 100%;
+  border: 2px solid #000;
+  padding: 10px;
+}
+
+.add form input[type='button'] {
+  float: right;
+  width: 30%;
+  border: 2px solid #000;
+  background: #fff;
+  box-shadow: 2px 2px #000;
+  cursor: pointer;
+}
+
+.add form input[type='button']:hover {
+  background: #333;
+  color: #fff;
+}
+
+.pad-btm {
+  padding-bottom: 15px;
+}
