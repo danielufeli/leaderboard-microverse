@@ -12,7 +12,7 @@ Leaderboard list app
 
 ## Live Demo
 
-[Live Demo Link](https://danielufeli.github.io/leaderboard-microverse)
+[Live Demo Link](https://danielufeli.github.io/leaderboard-microverse/dist)
 
 ## Getting Started
 
