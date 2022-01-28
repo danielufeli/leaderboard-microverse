@@ -1,8 +1,7 @@
-import { getGamesApi } from './api';
+import { getGamesApi } from './api.js';
 
 const getGames = async () => {
-  const url =
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/fxcnsYcJrkT4mY83CQhy/scores/';
+  const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/fxcnsYcJrkT4mY83CQhy/scores/';
 
   const fetchedGames = await getGamesApi(url);
   const { result } = fetchedGames;
