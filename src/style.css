@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+  padding: 50px;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding: 10px 35px;
+}
+
+.scores {
+  display: inline;
+}
+
+.scores h2 {
+  display: inline-block;
+  margin: 0;
+  padding-right: 20px;
+}
+
+.scores button {
+  float: right;
+  background: #fff;
+  border: 2px solid #000;
+  box-shadow: 2px 2px #000;
+}
+
+.scores table {
+  width: 100%;
+  border: 2px solid #000;
+}
+
+.scores-tr {
+  background: #ddd;
+}
