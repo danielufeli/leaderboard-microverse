@@ -1,4 +1,6 @@
-const createGame = (e) => {
+import { postGames } from './api.js';
+
+const createGame = async (e) => {
   e.preventDefault();
 
   const name = document.getElementById('name');
@@ -11,7 +13,6 @@ const createGame = (e) => {
     message.textContent = 'Please enter your name';
     return;
   }
-
   if (score.value === '') {
     message.textContent = 'Please enter a score';
     return;
@@ -22,23 +23,11 @@ const createGame = (e) => {
     score: score.value,
   };
 
-  const postGames = async () => {
-    const res = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(initBody),
-    });
-    const result = await res.json();
-    return result;
-  };
-  postGames().then((game) => {
-    const { result } = game;
-    message.textContent = result;
-    name.value = '';
-    score.value = '';
-  });
+  const postGamesApi = await postGames(url, initBody);
+  const { result } = postGamesApi;
+  message.textContent = result;
+  name.value = '';
+  score.value = '';
 };
 
 export default createGame;
