@@ -9,6 +9,7 @@ const getGames = () => {
 
   fetchGames().then((game) => {
     const { result } = game;
+    const gamesElement = document.getElementById('games');
     let gamesDisplay = '';
     if (result.length > 0) {
       result.map((g) => {
@@ -19,9 +20,9 @@ const getGames = () => {
         `;
         return game;
       });
-      document.getElementById('games').innerHTML = gamesDisplay;
+      gamesElement.innerHTML = gamesDisplay;
     } else {
-      document.getElementById('games').innerHTML = 'No Scores';
+      gamesElement.textContent = 'No Scores';
     }
   });
 };
